@@ -8,11 +8,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   Widget showText() {
     return Text(
-      'Welcome',
+      'HAPPY NEW YEAR 2020',
       style: TextStyle(
-          fontSize: 50.0, 
+          fontSize: 28.0, 
           fontWeight: FontWeight.bold, 
-          color: Colors.purple),
+          color: Colors.purple, fontFamily: 'item'),
     );
   }
 
@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
     return Text(
       'Mareeya Madsalaeman',
       style: TextStyle(
-          fontSize: 30.0,
+          fontSize: 28.0,
           fontWeight: FontWeight.bold,
           color: Colors.redAccent,
           fontFamily: 'item'),
@@ -32,20 +32,33 @@ class _HomeState extends State<Home> {
     );
   }
 
+  Widget showlogo(){
+    return Image.asset('images/bell.png' ,width: 150, height: 180,);
+  }
+
+  Widget pass(){
+    return Text('\n\n\n\n\n\n');
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
       body: SafeArea(
-        child: Center(
+        child: Container(
+          decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/ev.jpeg'))),
+          child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
+              showlogo(),
               showText(),
-              showName(),
-              showNumber()
+              //showName(),
+              //showNumber()
             ],
           ),
+        ),
         ),
       ),
     );
