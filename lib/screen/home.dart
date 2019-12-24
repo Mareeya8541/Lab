@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -73,26 +75,30 @@ class _HomeState extends State<Home> {
   }
 
   Widget buttonlogin(){
-    return RaisedButton.icon(
-      
-      color: Colors.limeAccent[400],
-      icon: Icon(Icons.account_circle ,
-      size: 30.0,
+    return Container(
+      width: 250,
+      child: RaisedButton.icon(
+        color: Colors.limeAccent[400],
+        icon: Icon(Icons.account_circle ,
+        size: 30.0,
+        ),
+        label: Text('Login'),
+        onPressed: (){},
       ),
-      label: Text('Login'),
-      onPressed: (){},
     );
   }
   
   Widget buttonRegis(){
-    return RaisedButton.icon(
-      
-      color: Colors.limeAccent[400],
-      icon: Icon(Icons.account_circle ,
-      size: 30.0,
+    return Container(
+      width: 250,
+      child: RaisedButton.icon(
+        color: Colors.limeAccent[400],
+        icon: Icon(Icons.recent_actors ,
+        size: 30.0,
+        ),
+        label: Text('Registor'),
+        onPressed: (){},
       ),
-      label: Text('Registor'),
-      onPressed: (){},
     );
   }
 
