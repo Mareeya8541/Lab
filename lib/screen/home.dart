@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
   }
 
   Widget showlogo(){
-    return Image.asset('images/bell.png' ,width: 150, height: 180,);
+    return Image.asset('images/bell.png' ,width: 200,);
   }
 
   Widget pass(){
@@ -48,7 +48,7 @@ class _HomeState extends State<Home> {
       child: TextFormField(
         decoration: InputDecoration(
           icon: Icon(Icons.email,
-          size: 30.0,
+          size: 35.0,
           color: Colors.limeAccent[400],
           ),
           labelText: 'Username',
@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
           color: Colors.limeAccent[400],
           ),
           labelText: 'Password',
-          hintText: 'your Password'
+          hintText: 'more 8 charactor'
         ),
       ),
     );
@@ -108,7 +108,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/ev.jpeg'))),
+          decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/lzzy.jpeg'))),
           child: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
