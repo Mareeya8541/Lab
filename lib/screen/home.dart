@@ -12,7 +12,7 @@ class _HomeState extends State<Home> {
       style: TextStyle(
           fontSize: 28.0, 
           fontWeight: FontWeight.bold, 
-          color: Colors.purple, fontFamily: 'item'),
+          color: Colors.limeAccent[400], fontFamily: 'item'),
     );
   }
 
@@ -40,6 +40,61 @@ class _HomeState extends State<Home> {
     return Text('\n\n\n\n\n\n');
   }
 
+  Widget emailText(){
+    return Container(
+      width: 250.0,
+      child: TextFormField(
+        decoration: InputDecoration(
+          icon: Icon(Icons.email,
+          size: 30.0,
+          color: Colors.limeAccent[400],
+          ),
+          labelText: 'Username',
+          hintText: 'your@email.com'
+        ),
+      ),
+    );
+  }
+
+  Widget passText(){
+    return Container(
+      width: 250.0,
+      child: TextFormField(
+        decoration: InputDecoration(
+          icon: Icon(Icons.vpn_key,
+          size : 30.0,
+          color: Colors.limeAccent[400],
+          ),
+          labelText: 'Password',
+          hintText: 'your Password'
+        ),
+      ),
+    );
+  }
+
+  Widget buttonlogin(){
+    return RaisedButton.icon(
+      
+      color: Colors.limeAccent[400],
+      icon: Icon(Icons.account_circle ,
+      size: 30.0,
+      ),
+      label: Text('Login'),
+      onPressed: (){},
+    );
+  }
+  
+  Widget buttonRegis(){
+    return RaisedButton.icon(
+      
+      color: Colors.limeAccent[400],
+      icon: Icon(Icons.account_circle ,
+      size: 30.0,
+      ),
+      label: Text('Registor'),
+      onPressed: (){},
+    );
+  }
 
 
   @override
@@ -54,6 +109,10 @@ class _HomeState extends State<Home> {
             children: <Widget>[
               showlogo(),
               showText(),
+              emailText(),
+              passText(),
+              buttonlogin(),
+              buttonRegis(),
               //showName(),
               //showNumber()
             ],

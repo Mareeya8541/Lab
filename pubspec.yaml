@@ -47,6 +47,8 @@ flutter:
     - images/katoon.jpeg
     - images/san.jpeg
     - images/ev.jpeg
+    - images/wo.jpeg
+    - images/email.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
