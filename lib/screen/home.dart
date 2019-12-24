@@ -22,9 +22,9 @@ class _HomeState extends State<Home> {
     return Text(
       'Mareeya Madsalaeman',
       style: TextStyle(
-          fontSize: 28.0,
+          fontSize: 20.0,
           fontWeight: FontWeight.bold,
-          color: Colors.redAccent,
+          color: Colors.limeAccent[400],
           fontFamily: 'item'),
     );
   }
@@ -115,11 +115,12 @@ class _HomeState extends State<Home> {
             children: <Widget>[
               showlogo(),
               showText(),
+              showName(),
               emailText(),
               passText(),
               buttonlogin(),
               buttonRegis(),
-              //showName(),
+              
               //showNumber()
             ],
           ),
