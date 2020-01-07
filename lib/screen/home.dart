@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:lab2/screen/secondPage.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -83,7 +84,9 @@ class _HomeState extends State<Home> {
         size: 30.0,
         ),
         label: Text('Login'),
-        onPressed: (){},
+        onPressed: (){
+          
+        },
       ),
     );
   }
@@ -97,7 +100,12 @@ class _HomeState extends State<Home> {
         size: 30.0,
         ),
         label: Text('Registor'),
-        onPressed: (){},
+        onPressed: (){
+          var route = MaterialPageRoute(
+            builder: (BuildContext context) => SecondPage()
+          );
+          Navigator.of(context).push(route);
+        },
       ),
     );
   }
