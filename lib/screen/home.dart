@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:lab2/screen/secondPage.dart';
+import 'package:lab2/screen/loginPage.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -9,6 +10,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final String titleString ="Home";
+  var textEditController = new TextEditingController();
+  var textEditController1 = new TextEditingController();
+
+
   Widget showText() {
     return Text(
       'HAPPY NEW YEAR 2020',
@@ -47,6 +53,7 @@ class _HomeState extends State<Home> {
     return Container(
       width: 250.0,
       child: TextFormField(
+        controller: textEditController,
         decoration: InputDecoration(
           icon: Icon(Icons.email,
           size: 35.0,
@@ -63,6 +70,7 @@ class _HomeState extends State<Home> {
     return Container(
       width: 250.0,
       child: TextFormField(
+        controller: textEditController1,
         decoration: InputDecoration(
           icon: Icon(Icons.vpn_key,
           size : 30.0,
@@ -85,7 +93,13 @@ class _HomeState extends State<Home> {
         ),
         label: Text('Login'),
         onPressed: (){
-          
+          var route = MaterialPageRoute(
+            builder: (BuildContext context) => LoginPage(
+              valueFromHome: textEditController.text,
+              valueFromHome1: textEditController1.text,
+            )
+          );
+          Navigator.of(context).push(route);
         },
       ),
     );
