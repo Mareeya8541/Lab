@@ -8,7 +8,11 @@ class SecondPage extends StatefulWidget {
 
 class _SecondPageState extends State<SecondPage> {
   final String titleString ="SecondPage";
-  var textEditController = new TextEditingController();
+  var textUser = new TextEditingController();
+  var textLastname = new TextEditingController();
+  var textPass = new TextEditingController();
+  var textAge = new TextEditingController();
+  var textEmail = new TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -16,16 +20,65 @@ class _SecondPageState extends State<SecondPage> {
       children: <Widget>[
         ListTile(
           title: TextField(
-            controller: textEditController,
+            controller: textUser,
+            decoration: InputDecoration(
+              labelText: 'Name',
+              hintText: 'Username'
+            ),
           ),
         ),
+
+        ListTile(
+          title: TextField(
+            controller: textLastname,
+            decoration: InputDecoration(
+              labelText: 'LastName',
+              hintText: 'lastname'
+            ),
+          ),
+        ),
+
+        ListTile(
+          title: TextField(
+            controller: textEmail,
+            decoration: InputDecoration(
+              labelText: 'Email',
+              hintText: 'abc@gmail.com'
+            ),
+          ),
+        ),
+
+        ListTile(
+          title: TextField(
+            controller: textPass,
+            decoration: InputDecoration(
+              labelText: 'Password',
+              hintText: 'more 8 charactor'
+            ),
+          ),
+        ),
+
+        ListTile(
+          title: TextField(
+            controller: textAge,
+            decoration: InputDecoration(
+              labelText: 'Age',
+              hintText: 'Age'
+            ),
+          ),
+        ),
+
         ListTile(
           title: RaisedButton(
-            child: Text('Next to Thirt Page'),
+            child: Text('Next'),
             onPressed: (){
               var route = MaterialPageRoute(
                 builder: (BuildContext context) => ThirtPage(
-                  valueFromSecondPage: textEditController.text,
+                  valueFromSecondPage: textUser.text,
+                  valueFromSecondPage1: textLastname.text,
+                  valueFromSecondPage2: textPass.text,
+                  valueFromSecondPage3: textAge.text,
+                  valueFromSecondPage4: textEmail.text,
                 )
               );
               Navigator.of(context).push(route);
